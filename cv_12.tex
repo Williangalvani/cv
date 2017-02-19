@@ -19,7 +19,42 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+\documentclass[A4]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+
+\usepackage{array}
+\newcolumntype{y}[1]{>{\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\renewcommand*{\arraystretch}{1.2}
+
+
+\usepackage{tikz}
+\newcommand\resume[2]{%
+  \ifnum#1>#2
+    $#1 > #2$
+  \else
+    \ifnum#1<0
+      $#1 < 0$
+    \else
+      \ifnum#2<0
+        $#2 < 0$
+      \else
+        \tikz{%
+        \ifx#20
+        \else
+          \foreach \i in {1,...,#2} {
+            \filldraw[black!20] (\i ex,0) circle (0.4ex);
+          };
+        \fi
+        \ifx#10
+        \else
+          \foreach \i in {1,...,#1} {
+            \filldraw[black] (\i ex,0) circle (0.4ex);
+          };
+        \fi
+        }
+      \fi
+    \fi
+  \fi
+}
 
 \begin{document}
 
@@ -30,8 +65,8 @@
 \lastupdated % Print the Last Updated text at the top right
 
 \namesection{Willian}{Galvani}{ % Your name
-\urlstyle{same}\url{} \\ % Your website, LinkedIn profile or other web address
-\href{mailto:williangalvani@gmail.com}{williangalvani@gmail.com} | (48)9996-5310 % Your contact information
+\urlstyle{same}\url{http//galvanicloop.com} \\ % Your website, LinkedIn profile or other web address
+\href{mailto:williangalvani@gmail.com}{williangalvani@gmail.com} | (48)99996-5310 % Your contact information
 }
 
 
@@ -53,8 +88,11 @@
 \location{Incompleto: 2008-2010}
 
 \descript{Engenharia de Controle e Automação}
-\location{7ª fase, 2011 - Atualmente}
+\location{9ª fase, 2011.2 - 2017.2}
 
+\subsection{SEAMK}
+\descript{(Intercâmbio em Automation Engineering)}
+\location{2014.2-2015.2}
 
 \sectionspace % Some whitespace after the section
 
@@ -76,27 +114,47 @@
 
 
 \location{Programação}
-Python \textbullet{} C  \textbullet{} C++ \textbullet{} C\# \textbullet{} \LaTeX\ \\ \textbullet{} HTML\textbullet{} Javascript \\
-\location{Outros}
-\textbullet CAD(SolidWorks/Inventor) \textbullet Linux \textbullet Windows \textbullet Django \textbullet Arduino \textbullet Proteus \textbullet Eagle
+\begin{tabular}{y{55pt}y{65pt}}
+Python  & \resume{8}{10} \\ 
+C & \resume{6}{10}  \\
+C++ & \resume{6}{10} \\
+C\# & \resume{6}{10} \\
+\LaTeX\ & \resume{6}{10} \\
+HTML & \resume{6}{10}\\
+JavaScript & \resume{6}{10} \\
+Css & \resume{4}{10}
+\end{tabular}\\
 
+\vspace*{0.2cm}
+
+\location{Frameworks/Bibliotecas}
+\begin{tabular}{y{55pt}y{65pt}}
+Arduino & \resume{9}{10} \\
+Django & \resume{8}{10} \\
+Ionic & \resume{6}{10} \\
+OpenCV &\resume{6}{10}
+\end{tabular}
+\vspace*{0.2cm}
+
+\location{Outros}
+\begin{tabular}{y{55pt}y{65pt}}
+GIT & \resume{9}{10} \\
+Inventor & \resume{6}{10} \\
+Linux & \resume{6}{10} \\
+SolidWorks & \resume{5}{10} \\
+Proteus & \resume{5}{10} \\
+Eagle & \resume{4}{10} \\
+\end{tabular}
 
 \sectionspace % Some whitespace after the section
+
+
+\section{Interesses}
+Aeromodelismo,\\ Programação,\\ Robótica móvel,\\ Veículos Autônomos,\\Visão Computacional,\\ Data Science,\\ Inteligência Artificial.
 
 %\section{Awards}
 %Arthur Zamanakos Scholarship (excellence in Mathematics) \textbullet{} Ye-Yung Teng Memorial Scholarship (excellence in Physics) \textbullet{} Kennedy Family Merit Scholarship (June 2012, June 2013)
 
-\section{Interesses}
-Aeromodelismo, Programação,\\ Robótica móvel, Veículos Autônomos,\\Visão Computacional,\\ Inteligência Artificial.
-
-\section{Línguas}
-Português(nativo),\\ Inglês(Toefl IBT 106/120).
-
-\section{GitHub}
-\href{https://github.com/Williangalvani}{GitHub.com/Williangalvani}
-
-\section{Website}
-\href{https://GalvanicLoop.com}{GalvanicLoop.com}
 
 %----------------------------------------------------------------------------------------
 
@@ -114,8 +172,6 @@ Português(nativo),\\ Inglês(Toefl IBT 106/120).
 %------------------------------------------------
 % Experience
 %------------------------------------------------
-
-\section{Experiência Profissional}
 
 \runsubsection{UFSC - Departamento de Automação e Sistemas}
 \descript{Desenvolvimento e manutenção de websites}
@@ -137,14 +193,21 @@ Português(nativo),\\ Inglês(Toefl IBT 106/120).
 \sectionspace % Some whitespace after the section
 
 
-\runsubsection{UFSC - Laboratorio Controle de automação}
-\descript{\\ ProVant- Projeto de Veiculo Aéreo não-tripulado.}
+\runsubsection{UFSC - Laboratório de Controle de automação}
+\descript{\\ ProVant- Projeto de Veículo Aéreo não-tripulado.}
 \location{Julho 2012 – Dez 2014}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightitemize}
  \item Piloto e Desenvolvedor no projeto ProVant de uma aeronave Tilt-Rotor autônoma.
+ \item Projeto de protocolo de comunicação entre VANT e estação-base.
+ \item Projeto elétro-eletrônico de VANTs.
+% * <patrickelectric@gmail.com> 2016-12-23T15:58:56.004Z:
+%
+% Fala dos paranaue que nos fez.
+% interface gráfica, comunicação montagem eletronica e essas coisas
+%
+% ^.
 \end{tightitemize}
-
 
 \sectionspace % Some whitespace after the section
 
@@ -162,7 +225,25 @@ Português(nativo),\\ Inglês(Toefl IBT 106/120).
 \runsubsection{Robota}
 \descript{\\ Equipe de competições em robótica móvel.}
 \location{Março 2016 – Atualmente}
+\begin{tightitemize}
+ \item Desenvolvimento de robôs autônomos para competições.
+ \item Desenvolvimento de ferramentas open-source para soluções em robótica móvel.
+\end{tightitemize}
+
+
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+
+\runsubsection{UFSC / FEESC / Petrobras}
+\descript{\\ Otimização sem derivadas para a sintonia automática de um simulador de poços de petróleo.}
+\location{Agosto 2016 – Atualmente}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Utilização de otimizadores para funções caixa-preta.
+ \item Implementação de métodos de otimização sem derivadas em Python.
+ \item Implementação de Interface de otimizadores com o Simulador Marlim da Petrobras. 
+
+\end{tightitemize}
 
 
 
@@ -202,19 +283,36 @@ Português(nativo),\\ Inglês(Toefl IBT 106/120).
 %	SECOND PAGE (EXAMPLE)
 %----------------------------------------------------------------------------------------
 
-%\newpage % Start a new page
+\newpage % Start a new page
 
-%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
 
-%\section{Example Section}
+\section{Línguas}
+Português(nativo),\\ Inglês(Toefl IBT 106/120).
 
-%\end{minipage} % The end of the left column
-%\hfill
-%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+\section{GitHub}
+\href{https://github.com/Williangalvani}{GitHub.com/Williangalvani}
 
-%\section{Example Section 2}
+\section{Website}
+\href{https://GalvanicLoop.com}{GalvanicLoop.com}
+\section{Example Section}
 
-%\end{minipage} % The end of the right column
+\end{minipage} % The end of the left column
+\hfill
+\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+
+
+
+\runsubsection{INFOCEL Celulares}\\
+\descript{Vendedor}
+\location{Agosto 2011 – Dez 2013}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+
+
+
+\end{minipage} % The end of the right column
 
 %----------------------------------------------------------------------------------------
 
