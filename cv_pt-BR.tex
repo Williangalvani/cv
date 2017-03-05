@@ -20,11 +20,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[A4]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
-
+\usepackage{fontspec}
+\usepackage{fontawesome}
 \usepackage{array}
 \newcolumntype{y}[1]{>{\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 \renewcommand*{\arraystretch}{1.2}
-
 
 \usepackage{tikz}
 \newcommand\resume[2]{%
@@ -344,9 +344,64 @@ Escala:\\
 \end{tightitemize}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 
-\section{Projetos Relacionados}
+\section{Projetos - VANTs}
 
-\runsubsection{Website}
+\runsubsection{Desenvolvimento/Montagem de VANTs}
+\descript{}
+\begin{tightitemize}
+ \item Quadcópteros (Multiwii, Apm, KapteinKuk).
+ \item Tricóptero (Multiwii). 
+ \item Bicóptero (MultiWii).
+ \item Asas voadoras.
+ \item Aviões.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{ProVant Groundstation \href{https://github.com/Williangalvani/provant-groundstation}{\faGithub}}
+\descript{(Python + Qt)}
+\begin{tightitemize}
+ \item Software de estação base para o ProVant, projeto de Tilt-Rotor da UFSC.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Rpi Multiwii FPV \href{https://github.com/Williangalvani/RpiMultiwiiFpv}{\faGithub}}
+\descript{(Python + Qt)}
+\begin{tightitemize}
+ \item Experimento para utilizar uma conexão Wi-Fi para telemetria, downlink de vídeo, e uplink de comandos via joystick.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Drone Token Tracker \href{https://github.com/Williangalvani/drone-token-tracker}{\faGithub}}
+\descript{(Python + OpenCV)}
+\begin{tightitemize}
+ \item Sistema de rastreamento de um token utilizando um quadcoptero no simulador V-Rep.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\runsubsection{DiyOSD MultiWii\href{https://github.com/Williangalvani/diyosd_multiwii}{\faGithub}}
+\descript{(Arduino, Baixo-Nível, Eletrônica)}
+\begin{tightitemize}
+ \item Projeto de OSD de baixo custo utilizando apenas um arduino e componentes passivos, dependendo fortemente do tempo fixo de execução para manipulação dos dados analógicos.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Planador Solar Autônomo (WIP) \href{http://galvanicloop.com/blog/post/13/building-a-solar-powered-glider-wip}{\faExternalLink}}\\
+\descript{(X-Foil + Impressão 3D + Eletrônica)}
+\begin{tightitemize}
+ \item Projeto de um moto-planador solar, autônomo tanto em navegação quanto em capacide energética.
+ \item Objetivo de identificar e aproveitar termais.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\section{Projetos - Backend}
+
+\runsubsection{Website \href{https://github.com/Williangalvani/meuBlog}{\faGithub}}
 \descript{(Django + Bootstrap E)}
 \begin{tightitemize}
  \item Blog pessoal utilizando Django.
@@ -354,7 +409,7 @@ Escala:\\
 
 \sectionspace % Some whitespace after the section
 
-\runsubsection{HobbyKing Search}
+\runsubsection{HobbyKing Search \href{https://github.com/Williangalvani/hkSearcher}{\faGithub}}
 \descript{(Django + Bootstrap + JQuery + JQueryUI)}
 \begin{tightitemize}
  \item Sistema alternativo para buscas de componentes no site da HobbyKing, utilizando sliders para filtragem de vários parâmetros.
