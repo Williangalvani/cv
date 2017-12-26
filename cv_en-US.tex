@@ -1,0 +1,436 @@
+%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[A4]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+\usepackage[portuguese]{babel}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{array}
+\newcolumntype{y}[1]{>{\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\renewcommand*{\arraystretch}{1.2}
+
+\usepackage{tikz}
+\newcommand\resume[2]{%
+  \ifnum#1>#2
+    $#1 > #2$
+  \else
+    \ifnum#1<0
+      $#1 < 0$
+    \else
+      \ifnum#2<0
+        $#2 < 0$
+      \else
+        \tikz{%
+        \ifx#20
+        \else
+          \foreach \i in {1,...,#2} {
+            \filldraw[black!20] (\i ex,0) circle (0.4ex);
+          };
+        \fi
+        \ifx#10
+        \else
+          \foreach \i in {1,...,#1} {
+            \filldraw[black] (\i ex,0) circle (0.4ex);
+          };
+        \fi
+        }
+      \fi
+    \fi
+  \fi
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\lastupdated % Print the Last Updated text at the top right
+
+\namesection{Willian}{Galvani}{ % Your name
+% Your website, LinkedIn profile or other web address
+\href[pdfnewwindow=true]{mailto:williangalvani@gmail.com}{\faEnvelopeO \, williangalvani@gmail.com} \,  \faPhone \, +55 48)99996-5310 % Your contact information
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	LEFT COLUMN
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Education} 
+
+\subsection{UFSC}
+\descript{Computers Science Bachelor's}
+\location{Incomplete: 2008-2010}
+\vspace*{0.2cm}
+\descript{Control and Automation Engineering}
+\location{2011 - 2017}
+\vspace*{0.2cm}
+\subsection{SEAMK}
+\descript{(Automation Engineering Exchange Student)}
+\location{2014.2-2015.2}
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+% Coursework
+%------------------------------------------------
+
+% \section{Coursework}
+
+% \subsection{Physics}
+%  Waves and Optics, Electromagnetism I and II, Intro to Quantum Mechanics I and II, Statistical Thermodynamics, Modern Physics, Classical Mechanics
+
+% \subsection{Mathematics}
+% Mathematics of Signal Processing, Linear Algebra I and II, Probability and Statistics I, Applied Math I and II, Complex Variables, Partial Differential Equations, Discrete Structures\\
+
+% \sectionspace % Some whitespace after the section
+
+\section{Skills}
+
+
+\location{Programming}
+\begin{tabular}{y{55pt}y{65pt}}
+Python  & \resume{7}{10} \\ 
+C & \resume{6}{10}  \\
+C++ & \resume{5}{10} \\
+C\# & \resume{5}{10} \\
+\LaTeX\ & \resume{5}{10} \\
+MATLAB & \resume{5}{10} \\
+HTML & \resume{6}{10}\\
+JavaScript & \resume{6}{10} \\
+CSS & \resume{4}{10}\\
+DRF & \resume{3}{10}
+\end{tabular}\\
+
+\vspace*{0.2cm}
+
+\location{Frameworks/Libraries}
+\begin{tabular}{y{55pt}y{65pt}}
+Arduino & \resume{7}{10} \\
+Django & \resume{7}{10} \\
+Ionic & \resume{5}{10} \\
+OpenCV &\resume{5}{10} \\
+Qt &\resume{4}{10}
+\end{tabular}
+\vspace*{0.2cm}
+
+\location{Others}
+\begin{tabular}{y{55pt}y{65pt}}
+GIT & \resume{7}{10} \\
+Inventor & \resume{6}{10} \\
+Linux & \resume{6}{10} \\
+Networking & \resume{6}{10} \\
+SolidWorks & \resume{5}{10} \\
+Proteus & \resume{5}{10} \\
+V-REP & \resume{5}{10} \\
+Eagle & \resume{4}{10} \\
+\end{tabular}
+
+\vspace*{0.3cm}
+
+\scriptsize 1-Shallow knowledge.\\
+2-Able to perform minor changes.\\
+3,4-Able to develop small projects.\\
+5,6-Comfortable with the tool, able to fulfill more complex tasks and projects.\\
+7,8-Understands the inner workings of the tool. \\
+9,10-Comprehensive knowledge regarding the tool's implementation, inner workings, and nuances, able to recreate it given enough time.
+
+\sectionspace % Some whitespace after the section
+
+
+
+%\section{Awards}
+%Arthur Zamanakos Scholarship (excellence in Mathematics) \textbullet{} Ye-Yung Teng Memorial Scholarship (excellence in Physics) \textbullet{} Kennedy Family Merit Scholarship (June 2012, June 2013)
+
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the left column
+\hfill
+%
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN
+%----------------------------------------------------------------------------------------
+%
+\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+
+
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+\section{Professional Experience}
+
+\runsubsection{UFSC / FEESC / Petrobras}
+\descript{\\ Derivative Free Optimization for Automatic Tuning of an Oil Well Simulator.}
+\location{August 2016 – March 2017}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Use of tuners for optimization of black box functions.
+ \item Implementation of derivative free optimization methods in Python.
+ \item Implementation of a software interface between tuners and Petrobras in-house multi-phasic flow simulation software.
+
+\end{tightitemize}
+\sectionspace % Some whitespace after the section
+
+
+\runsubsection{Robota}
+\descript{\\ Mobile robotics competition team.}
+\location{March 2016 – now}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Development of autonomous robots for competitions.
+ \item Development of open-source solutions and tools for mobile robotics.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Instituto SESI de inovação}
+\descript{\\ Embedded softwares development.}
+\location{August 2015 – February 2016}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Embedded Python development on Raspberry PI.
+ \item Embedded C programming on freedom K64f platform.
+\end{tightitemize}
+
+
+
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+
+\runsubsection{UFSC - Laboratório de Controle de automação}
+\descript{\\ ProVant- Project of an unmanned aerial vehicle.}
+\location{July 2012 – June 2014}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Pilot e Developer at ProVant, the project of an autonomous  Tilt-Rotor aircraft.
+ \item Design and implementation of communication protocol between UAV and ground station.
+ \item Assistance on electrical, electronic, and mechanical projects.
+ \item Design and implementation of a ground station software using  Python and Qt.
+
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{UFSC - Departament of Automation and Systems}
+\descript{Website development and maintenance}
+\location{August 2011 – December 2013}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Development and maintenance of both the Department of Automation and Systems and Control and Automation Engineering course websites, using Python with the Django framework.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\descript{Development of the Access Control System}
+\location{November 2013 – June 2014}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Development and maintenance of a access control management system interface internal for the department and it's laboratories, interfacing with the built-in software on the controllers, built using Python and the Django framework.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+% Research
+%------------------------------------------------
+
+\sectionspace % Some whitespace after the section
+
+%------------------------------------------------
+
+%\runsubsection{Explorations in Quasi-Randomness}
+%\descript{| Undergraduate Researcher and Co-Founder}
+%\location{Oct. 2012 – Dec. 2013 | Lowell, MA} 
+%\begin{tightitemize}
+%\vspace{\topsep}
+%\item Initiated the start up of the group with \textbf{\href[pdfnewwindow=true]{http://faculty.uml.edu/jpropp/}{Prof. James Propp}} and recruited students to join. 
+%\item Worked in a small group on combinatorics problems related to the de-randomized Polya and Smirnov boards. 
+%\item Presented work at an undergraduate mathematics conference.
+%\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\sectionspace
+
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE (EXAMPLE)
+%----------------------------------------------------------------------------------------
+
+\newpage % Start a new page
+
+\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+\section{Interest Areas}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item RC Aircraft.
+\item Data Science
+\item Artificial Intelligence.
+\item Optimization.
+\item Programming.
+\item Mobile Robotics.
+\item Autonomous Vehicles
+\item Computer Vision.
+\item Software Define Radio
+\end{tightitemize}
+
+\section{Languages}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item Portuguese (native)
+\item English (Toefl IBT 106/120 as of 2014)
+\end{tightitemize}
+\section{GitHub}
+\faGithub \href[pdfnewwindow=true]{http://github.com/Williangalvani}{GitHub.com/Williangalvani}
+
+\section{Website}
+\faGlobe \href[pdfnewwindow=true]{http://GalvanicLoop.com}{ GalvanicLoop.com}
+
+
+\end{minipage} % The end of the left column
+\hfill
+\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+
+
+
+
+\runsubsection{INFOCEL Celulares}\\
+\descript{Salesman}
+\location{January 2011 – June 2011}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+ \item Suport and sales.
+\end{tightitemize}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\section{Projects - UAVs}
+
+\runsubsection{Desenvolvimento/Montagem de VANTs}
+\descript{}
+\begin{tightitemize}
+ \item Quadrotors (Multiwii, Apm, KapteinKuk).
+ \item Trirotor (Multiwii). 
+ \item Tilt-rotor (MultiWii).
+ \item Flying wings.
+ \item Airplanes.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{ProVant Groundstation} \href[pdfnewwindow=true]{http://github.com/Williangalvani/provant-groundstation}{\faGithub}
+\descript{(Python + Qt)}
+\begin{tightitemize}
+ \item  software developed for the PROVANT project, a tilt-rotor developed by UFSC and UFMG.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Rpi Multiwii FPV} \href[pdfnewwindow=true]{http://github.com/Williangalvani/RpiMultiwiiFpv}{\faGithub}
+\descript{(Python + Qt)}
+\begin{tightitemize}
+ \item Experiments on the use of a Wi-Fi network for telemetry, video downlink, and control uplink. All links were implemented in UDP for a reasonable latency.
+
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Drone Token Tracker} \href[pdfnewwindow=true]{http://github.com/Williangalvani/drone-token-tracker}{\faGithub}
+\descript{(Python + OpenCV)}
+\begin{tightitemize}
+ \item Token tracking system by a quadrotor on the V-Rep simulator.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\runsubsection{DiyOSD MultiWii} \href[pdfnewwindow=true]{http://github.com/Williangalvani/diyosd_multiwii}{\faGithub}
+\descript{(Arduino + Low-level + Electronics)}
+\begin{tightitemize}
+ \item Project of a low-cost OSD using only an Arduino and passive components, heavily execution time sensitive for data manipulation tasks.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Autonomous Solar Glider (WIP) }\href[pdfnewwindow=true]{http://galvanicloop.com/blog/post/13/building-a-solar-powered-glider-wip}{\faExternalLink}\\
+\descript{(X-Foil + 3D-Printing + Electronics)}
+\begin{tightitemize}
+ \item Design of an autonomous powered glider, autonomous both for navigation as in power generation.
+ \item Objective of autonomously identifying and taking advantage of thermals.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\section{Projects - Full Stack}
+
+\runsubsection{Website} \href[pdfnewwindow=true]{http://github.com/Williangalvani/meuBlog}{\faGithub}
+\descript{(Django + Bootstrap)}
+\begin{tightitemize}
+ \item Personal blog in Python and Django.
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+\runsubsection{HobbyKing Search} \href[pdfnewwindow=true]{http://github.com/Williangalvani/hkSearcher}{\faGithub}\\
+\descript{(Django + Bootstrap + JQuery + JQueryUI)}
+\begin{tightitemize}
+ \item Alternative system for searching batteries and motors on HobbyKing, using sliders for filtering various parameters.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+\runsubsection{Access Control System - DAS}
+\descript{(Django + Bootstrap + JQuery)}
+\begin{tightitemize}
+ \item Access control system interface for the Department of Automation and Systems at UFSC. This project entailed reverse engineering of the the hardware, software, and database shipped with the used systems.
+ \end{tightitemize}
+ 
+\sectionspace % Some whitespace after the section
+
+
+
+
+
+
+
+\end{minipage} % The end of the right column
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
