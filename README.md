@@ -1,6 +1,6 @@
 ### Curriculum Vitae
 
-This is My out-of-to date curriculum vitae.
+This is My out-of date curriculum vitae.
 
 ## Requirements:
  - font-awesome
